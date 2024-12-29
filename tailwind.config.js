@@ -10,7 +10,9 @@ export default {
   	extend: {
   		animation: {
   			aurora: 'aurora 60s linear infinite',
-  			rainbow: 'rainbow var(--speed, 2s) infinite linear'
+  			rainbow: 'rainbow var(--speed, 2s) infinite linear',
+  			shine: 'shine var(--duration) infinite linear',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
   		},
   		keyframes: {
   			aurora: {
@@ -27,6 +29,25 @@ export default {
   				},
   				'100%': {
   					'background-position': '200%'
+  				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
+  				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
   				}
   			}
   		},

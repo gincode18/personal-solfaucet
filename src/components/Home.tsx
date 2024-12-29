@@ -13,7 +13,6 @@ import { GooeyText } from "./ui/gooey-text-morphing";
 
 export default function Home() {
   const [value, setValue] = useState(0)
-  const [PublicKey, setPublicKey] = useState("")
 
   const placeholders = ["Connect your", "Wallet to","AirDrop SOL"];
 

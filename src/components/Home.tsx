@@ -1,8 +1,6 @@
 
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import ShinyButton from "@/components/ui/shiny-button";
-import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { Input } from "@/components/ui/number-input";
 import { useState } from "react";
 import {
@@ -10,21 +8,14 @@ import {
   WalletMultiButton
 } from '@solana/wallet-adapter-react-ui';
 import { Balance } from "./Balance";
+import { RequestAirdrop } from "./AirDrop";
+import { GooeyText } from "./ui/gooey-text-morphing";
 
 export default function Home() {
   const [value, setValue] = useState(0)
   const [PublicKey, setPublicKey] = useState("")
 
-  const placeholders = ["Enter you public-key", "Don't enter your private-key", "To airdrop SOL to Devnet || Testnet"];
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPublicKey(e.target.value);
-  };
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("submitted");
-  };
+  const placeholders = ["Connect your", "Wallet to","AirDrop SOL"];
 
   return (
     <AuroraBackground>
@@ -49,17 +40,19 @@ export default function Home() {
           With the click of a button, fund your testnet or devnet wallet and
           join the fun in the SOL!
         </div>
-        <PlaceholdersAndVanishInput
-          placeholders={placeholders}
-          onChange={handleChange}
-          onSubmit={onSubmit}
-        />
-        <div className=" flex flex-col justify-center items-center gap-4">
+        <div className="h-[200px] flex items-center justify-center">
+          <GooeyText
+            texts={placeholders}
+            morphTime={1}
+            cooldownTime={0.25}
+            className="font-bold"
+          />
+        </div>
+        <div className="flex flex-col justify-center items-center gap-8">
           <div className="flex flex-row justify-center items-center gap-4">
             <Input value={value} onChange={setValue} min={0} max={10} />
             <p className="text-sm text-zinc-500">Min: 0, Max: 10</p>
-            <ShinyButton>Devnet</ShinyButton>
-            <ShinyButton>Testnet</ShinyButton>
+            <RequestAirdrop amount={value}></RequestAirdrop>
           </div>
           <Balance></Balance>
         </div>

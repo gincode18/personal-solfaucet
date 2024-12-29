@@ -35,6 +35,12 @@ importers:
       '@solana/web3.js':
         specifier: ^1.98.0
         version: 1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+      '@types/canvas-confetti':
+        specifier: ^1.9.0
+        version: 1.9.0
+      canvas-confetti:
+        specifier: ^1.9.3
+        version: 1.9.3
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -2546,6 +2552,9 @@ packages:
   '@types/babel__traverse@7.20.6':
     resolution: {integrity: sha512-r1bzfrm0tomOI8g1SzvCaQHo6Lcv6zu0EA+W2kHrt8dyrHQxGzBBL4kdkzIS+jBMV+EYcMAEAqXqYaLJq5rOZg==}
 
+  '@types/canvas-confetti@1.9.0':
+    resolution: {integrity: sha512-aBGj/dULrimR1XDZLtG9JwxX1b4HPRF6CX9Yfwh3NvstZEm1ZL7RBnel4keCPSqs1ANRu1u2Aoz9R+VmtjYuTg==}
+
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
@@ -3154,6 +3163,9 @@ packages:
 
   caniuse-lite@1.0.30001690:
     resolution: {integrity: sha512-5ExiE3qQN6oF8Clf8ifIDcMRCRE/dMGcETG/XGMD8/XiXm6HXQgQTh1yZYLXXpSOsEUlJm1Xr7kGULZTuGtP/w==}
+
+  canvas-confetti@1.9.3:
+    resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
 
   cashaddrjs@0.4.4:
     resolution: {integrity: sha512-xZkuWdNOh0uq/mxJIng6vYWfTowZLd9F4GMAlp2DwFHlcCqCm91NtuAc47RuV4L7r4PYcY5p6Cr2OKNb4hnkWA==}
@@ -9062,6 +9074,8 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.3
 
+  '@types/canvas-confetti@1.9.0': {}
+
   '@types/connect@3.4.38':
     dependencies:
       '@types/node': 22.10.2
@@ -9960,6 +9974,8 @@ snapshots:
   camelcase@6.3.0: {}
 
   caniuse-lite@1.0.30001690: {}
+
+  canvas-confetti@1.9.3: {}
 
   cashaddrjs@0.4.4:
     dependencies:
